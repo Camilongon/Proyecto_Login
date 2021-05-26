@@ -1,0 +1,7 @@
+1. Cargar archivo de BDD Dotacion WOM formato Excel, extraer
+2. Utilizar como features: Cargo, Servicio, RutDV Usuario Red,
+Nombre Completo, Estado, Fecha Ingreso Plataforma.
+3. Hacer un Selection Input para Cargo.
+4. HAcer un Selection Input para Servicio (Default todos)
+5. Todas las lecturas deben tener como Estado "Vigente"
+6. Fecha de Ingreso de cada uno debe ser menor que la fecha del archivo
