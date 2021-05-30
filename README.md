@@ -13,7 +13,7 @@ Modo de uso:
 
 Este nos mostrara su contenido en la seccion principal de la pagina. Pero esta informacion se encuentra poblada por usuarios que no son necesariamente de nuestra importancia, por lo cual debemos importar nuestra base, con el objetivo de filtrar la informacion de acuerdo a nuestra informacion actualizada.
 
-4.En la seccion reporte día, "Base de datos de referencia" procederemos a importar los datos de los usuarios a ser considerados para el analisis, esta base esta dispuesta en la seccion Document Input como "BDD_HOLDTECH_26022021".
+4. En la seccion reporte día, "Base de datos de referencia" procederemos a importar los datos de los usuarios a ser considerados para el analisis, esta base esta dispuesta en la seccion Document Input como "BDD_HOLDTECH_26022021".
 
 Ahora tenemos el mismo formato anterior, pero esta vez filtrada por los datos que nos interesa.
 
