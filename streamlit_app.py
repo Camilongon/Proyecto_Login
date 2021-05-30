@@ -19,10 +19,10 @@ st.sidebar.header('Introduccion de valores')
 
 #Reporte Agent-Login-Logut
 date_required = st.sidebar.date_input('Día a evaluar', min_value=datetime.date(2019,1,1) ) #Returns datetime.date
-daily_report = st.sidebar.file_uploader('Reporte dia', type=['csv'], accept_multiple_files=False)
+daily_report = st.sidebar.file_uploader('Reporte día', type=['csv'], accept_multiple_files=False)
 delim = st.sidebar.radio('Delimitador',(',',';'))
 bd_ht = st.sidebar.file_uploader('Base de datos de referencia')
-st.sidebar.text('BBDD Dotacion enviado por Yorman semanalmente')
+st.sidebar.text('BBDD Dotacion enviado semanalmente')
 
 #Base de datos Holdtech
 if daily_report:
@@ -52,7 +52,7 @@ if daily_report:
     st.write(df_report)
     
 else:
-    st.write("Waiting for Agent Loging-Logout file...")
+    st.write("Esperando por Agent Loging-Logout file...")
 
 
 if  bd_ht and date_required:
@@ -67,7 +67,7 @@ if  bd_ht and date_required:
 
     df_bd_filter = def_cal.get_bd_filter(df_bd, cargo=select_charge, servicio=select_service, date=date_required)
 else:
-    st.write("Waiting for BD")
+    st.write("Esperando por BD")
 
 if daily_report and bd_ht:
     st.subheader('Reporte filtrado')
@@ -137,7 +137,7 @@ if daily_report and bd_ht:
         diferencia = (hf_eval.values /req_eval.values )*100
         req_diff = pd.Series(diferencia.round(2), index=req_eval.index, name=hf_eval.index.max()[0:6])
 
-        c3.write('Req cumplimiento')
+        c3.write('Req cumplimiento (%)')
         c3.write(req_diff)
 
         resumen_df = pd.DataFrame(dict(requerido=req_eval.values, logs=hf_eval.values), index=hf_eval.index)
